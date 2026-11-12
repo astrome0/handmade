@@ -1,6 +1,6 @@
 # Handmade
 
-**▶ Play it: https://YOUR-GITHUB-NAME.github.io/handmade/**
+## **▶ Play it: https://astrome0.github.io/handmade/**
 
 A first-person build-it-by-hand game in the browser. Nothing comes ready: chop trees, saw planks,
 nail them together, lay bricks, paint, and grow a village. Built with [three.js](https://threejs.org)
@@ -17,17 +17,6 @@ Open the page. Your saves stay in your browser (IndexedDB), nothing is sent anyw
 right thumb = drag to look. Buttons: USE, ALT, JUMP, GRAB, plus 📱 phone, 💡 light, ⟳ turn, ⤓ sneak (toggle), ⏸ menu.
 Tap the hotbar to pick a tool. Try the touch controls on a computer with `?touch=1` after the address.
 
-## Run locally
-
-```
-node server.js     # http://localhost:8170
-```
-
-Any static file server works. The game is plain ES modules, so it can't be opened by double-clicking `index.html`.
-
-## Host on GitHub Pages
-
-Settings → Pages → Deploy from a branch → `main` / root. The `.nojekyll` file is already here.
 
 ## Phones
 
