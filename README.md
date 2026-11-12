@@ -1,5 +1,7 @@
 # Handmade
 
+**▶ Play it: https://YOUR-GITHUB-NAME.github.io/handmade/**
+
 A first-person build-it-by-hand game in the browser. Nothing comes ready: chop trees, saw planks,
 nail them together, lay bricks, paint, and grow a village. Built with [three.js](https://threejs.org)
 and [cannon-es](https://pmndrs.github.io/cannon-es/) (loaded from a CDN, no install needed).
@@ -22,7 +24,16 @@ node server.js     # http://localhost:8170
 ```
 
 Any static file server works. The game is plain ES modules, so it can't be opened by double-clicking `index.html`.
+
+## Host on GitHub Pages
+
+Settings → Pages → Deploy from a branch → `main` / root. The `.nojekyll` file is already here.
+
 ## Phones
 
 Phones and tablets are detected automatically and get lighter graphics (lower resolution, smaller shadows, less grass/traffic).
 Add `?fps=1` to the address to see the frame rate, `?pc=1` to force the full computer settings, `?mobile=1` to try the phone settings on a computer.
+
+## License
+
+MIT, see [LICENSE](LICENSE). Uses [three.js](https://threejs.org) and [cannon-es](https://pmndrs.github.io/cannon-es/) (both MIT, loaded from a CDN) and the Fraunces and Outfit fonts from Google Fonts (SIL Open Font License).
