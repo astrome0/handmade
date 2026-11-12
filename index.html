@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Handmade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/phone.css">
+<link rel="stylesheet" href="css/touch.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+    "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div id="hud" class="hide">
+  <div id="clock"></div>
+  <div id="money"><b>$300</b><i></i></div>
+  <div id="goal" class="hide"></div>
+  <div id="fps" class="hide"></div>
+  <div id="cross">
+    <svg class="ring" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" class="track"/><circle id="ringFill" cx="13" cy="13" r="11" class="fill"/></svg>
+    <div class="dot"></div>
+  </div>
+  <div id="info"></div>
+  <div id="toast"></div>
+  <div id="speedo"><b>0</b><span>km/h</span><i>P</i></div>
+  <div id="bottom">
+    <div id="hint"></div>
+    <div id="toolname"></div>
+    <div id="hotbar"></div>
+  </div>
+</div>
+
+<div id="phone" class="hide">
+  <div class="device">
+    <div class="screen">
+      <div class="status"><span id="phoneTime">07:12</span><span class="island"></span><span class="icons"><i class="sig"></i><i class="bat"></i></span></div>
+      <div id="app" class="app"></div>
+      <button class="homebar" data-act="close" title="Put the phone away (P)"></button>
+    </div>
+  </div>
+</div>
+
+<div id="menu" class="hide">
+  <div class="panel">
+    <section id="mMain">
+      <h1>Handmade</h1>
+      <p class="sub">Nothing comes ready. Chop it, saw it, nail it — your way.</p>
+      <p id="mWhere" class="where"></p>
+      <button id="play">Play</button>
+      <div class="mrow">
+        <button class="ghost" data-m="new">New game</button>
+        <button class="ghost" data-m="save">Save game</button>
+        <button class="ghost" data-m="load">Load game</button>
+      </div>
+      <div class="keys">
+        <div><kbd>W A S D</kbd> walk</div>
+        <div><kbd>Shift</kbd> crouch</div>
+        <div><kbd>W W</kbd> double-tap: sprint</div>
+        <div><kbd>Space</kbd> jump</div>
+        <div><kbd>1–6</kbd> / <kbd>wheel</kbd> tools</div>
+        <div><kbd>Click</kbd> use tool</div>
+        <div><kbd>Right click</kbd> saw planks / pull nail</div>
+        <div><kbd>E</kbd> pick up / drop</div>
+        <div><kbd>R</kbd> turn what you hold</div>
+        <div><kbd>L</kbd> flashlight on / off</div>
+        <div><kbd>P</kbd> phone — order materials</div>
+        <div><kbd>E</kbd> at the pickup: get in / out</div>
+        <div><kbd>Esc</kbd> pause · save · load</div>
+      </div>
+      <p class="tip">Tip: stand a short log up, hit its top with the hammer to make a post. Then nail planks across your posts.<br>Bricks: take some from the pallet at camp (E), mix a bag of mortar (E), then lay them with the trowel (5).</p>
+    </section>
+    <section id="mSaves" class="hide">
+      <header class="mbar">
+        <button class="back" data-m="back" title="Back">‹</button>
+        <h2 id="mTitle">Load game</h2>
+        <label class="ghost file" id="mImport">Open a file…<input type="file" accept=".json,application/json" hidden></label>
+      </header>
+      <div id="mList" class="slots"></div>
+      <p id="mNote" class="note"></p>
+    </section>
+    <section id="mNew" class="hide">
+      <header class="mbar">
+        <button class="back" data-m="back" title="Back">‹</button>
+        <h2>New game</h2>
+      </header>
+      <label class="vname"><span>Your village</span>
+        <span class="vrow"><input id="mName" maxlength="24" spellcheck="false" autocomplete="off"><button class="ghost dice" data-m="dice" title="Another name">⟳</button></span>
+      </label>
+      <div id="mModes" class="modes"></div>
+      <button id="mStart" class="startbtn">Start</button>
+    </section>
+    <div id="mConfirm" class="confirm hide">
+      <p></p>
+      <div class="mrow"><button class="ghost" data-c="no">Cancel</button><button class="warn" data-c="yes">Yes</button></div>
+    </div>
+  </div>
+</div>
+
+<div id="saved">Saved</div>
+<div id="loading"><span>Growing the forest…</span></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
