@@ -1,6 +1,6 @@
 # Handmade
 
-## **▶ Play it: https://astrome0.github.io/handmade/**
+## **Play it: https://astrome0.github.io/handmade/**
 
 A first-person build-it-by-hand game in the browser. Nothing comes ready: chop trees, saw planks,
 nail them together, lay bricks, paint, and grow a village. Built with [three.js](https://threejs.org)
@@ -14,7 +14,7 @@ Open the page. Your saves stay in your browser (IndexedDB), nothing is sent anyw
 `E` grab · `R` turn · `L` flashlight · `P` phone · `Esc` menu.
 
 **Phone / tablet (landscape):** left thumb = floating stick (push all the way to sprint),
-right thumb = drag to look. Buttons: USE, ALT, JUMP, GRAB, plus 📱 phone, 💡 light, ⟳ turn, ⤓ sneak (toggle), ⏸ menu.
+right thumb = drag to look. Buttons: USE, ALT, JUMP, GRAB, plus phone, light, ⟳ turn, ⤓ sneak (toggle), ⏸ menu.
 Tap the hotbar to pick a tool. Try the touch controls on a computer with `?touch=1` after the address.
 
 
