@@ -22,11 +22,6 @@ node server.js     # http://localhost:8170
 ```
 
 Any static file server works. The game is plain ES modules, so it can't be opened by double-clicking `index.html`.
-
-## Host on GitHub Pages
-
-Settings → Pages → Deploy from a branch → `main` / root. The `.nojekyll` file is already here.
-
 ## Phones
 
 Phones and tablets are detected automatically and get lighter graphics (lower resolution, smaller shadows, less grass/traffic).
